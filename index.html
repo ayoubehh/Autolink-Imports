@@ -472,29 +472,5 @@ renderCars();
         ${carSVG()}
         <div class="car-origin">${c.origin}</div>
       </div>
-
-      <div class="car-body">
-        <div class="car-make">${c.make}</div>
-        <div class="car-model">${c.model}</div>
-        <div class="car-year">${c.year}</div>
-
-        <div class="car-foot">
-          <div>
-            <div class="car-price">${c.price} €</div>
-          </div>
-
-          <button class="car-inquire" onclick="openModal('${c.make} ${c.model}')">
-            Consultar
-          </button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-  if (input === "") {
-  renderCars();
-  return;
-}
-</script>
 </body>
 </html>
