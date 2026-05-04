@@ -322,6 +322,20 @@ Trabajamos con distintas plataformas y proveedores en Europa para encontrar opci
     <div class="modal-eyebrow">Solicitar información</div>
     <div class="modal-title" id="modalTitle"></div>
     <form class="contact-form" onsubmit="handleModalSubmit(event)">
+       <form
+  action="https://formspree.io/f/xvzlkvoz"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>     
       <div class="form-row">
         <div class="form-group"><label class="form-label">Nombre</label><input type="text" class="form-input" placeholder="Tu nombre" required/></div>
         <div class="form-group"><label class="form-label">Teléfono</label><input type="tel" class="form-input" placeholder="6XX XXX XXX" required/></div>
@@ -329,6 +343,7 @@ Trabajamos con distintas plataformas y proveedores en Europa para encontrar opci
       <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="tu@email.com" required/></div>
       <div class="form-group"><label class="form-label">Mensaje</label><textarea class="form-textarea" style="min-height:90px" placeholder="¿Alguna pregunta sobre este vehículo?"></textarea></div>
       <button type="submit" class="form-submit">Enviar solicitud</button>
+  <button type="submit">Send</button>
     </form>
   </div>
 </div>
@@ -358,21 +373,6 @@ function maybeClose(e){if(e.target===document.getElementById('modalOverlay'))clo
 function handleSubmit(e){e.preventDefault();document.getElementById('formSuccess').style.display='block';e.target.querySelector('.form-submit').style.display='none';}
 function handleModalSubmit(e){e.preventDefault();closeModal();}
 renderCars();
-  <form
-  action="https://formspree.io/f/xvzlkvoz"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
 </script>
 </body>
 </html>
